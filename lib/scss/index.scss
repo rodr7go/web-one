@@ -1,0 +1,33 @@
+.Principal {
+    //padding-top: 4em;
+    @include center-content;
+    box-shadow: 1500px 1500px rgba($bg-header, .7) inset;
+
+    &-description {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    &-title {
+        text-align: center;
+        color: $color-white;
+    }
+
+    p {
+        color: $color-white;
+    }
+
+    &-image {
+        height: 110vh;
+        background: {
+            image: url("/img/index/bg-truck.gif");
+            repeat: no-repeat;
+            size: 100% 100%;
+        }
+    }
+    &-button{
+        @include btn-style();
+        margin: auto;
+    }
+
+}

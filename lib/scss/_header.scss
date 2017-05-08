@@ -19,7 +19,7 @@
         position: absolute;
         top: 15px;
         left: 15px;
-        color: $text;
+        color: $color-white;
 
         i{
             font-size: 2em;
@@ -35,7 +35,6 @@
             flex-flow: row wrap;
             margin: 0;
             padding: 0;
-            list-style-type: none;
             text-align: center;
         }
         &-listItem{
@@ -43,21 +42,16 @@
             height: 140px;
             box-sizing: border-box;
             border: 1px solid $border-item;
-            font-family: $font-family;
             background-color: $bg-listItem;
 
             a{
-                text-decoration: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include center-content;
                 width: 100%;
                 height: 100%;
-                color: $text;
+                color: $color-white;
                 i{
                     margin-left: 10px;
                     font-size: 2em;
-                    //color: red;
                 }
             }
         }
