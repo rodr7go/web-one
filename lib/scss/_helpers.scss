@@ -1,3 +1,6 @@
+.bg-attach-fix {
+    background-attachment: fixed;
+}
 .bg-tomato{
     background-color: tomato;
 }
@@ -5,9 +8,15 @@
 .color-white {
     color: $color-white;
 }
+.color-black {
+    color: $color-black;
+}
 
 .disp-blk{
     display: block;
+}
+.disp-inln-blk {
+    display: inline-block;
 }
 
 .m-t-xs {
@@ -15,6 +24,10 @@
 }
 .m-t-sm {
     margin-top: 10px;
+}
+
+.padd-0 {
+    padding: 0;
 }
 
 .txt-ctr {

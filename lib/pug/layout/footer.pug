@@ -1,3 +1,12 @@
+-var redes = ['facebook', 'twitter', 'instagram', 'youtube'];
+//-var pages = ['facebook.com/controlmas.mx/?fref=ts', 'twitter.com/franco_esca', 'instagram.com/holaenfermera/?hl=en', 'youtube.com/user/matuk'];
+
 footer.Footer
+
+	.Footer-Networks
+		ul.Footer-list.padd-0.txt-ctr
+			each red in redes
+				li(class="Footer-listItem disp-inln-blk"): a(href="#" class="disp-blk"): i(class="color-black fa fa-"+red)
+				//i(class="fa fa-"+ cero++)
 	// dos divs uno con redes 4 sociales, otro con &copy-2017 y buscar forma de poner quien desarrollo
-	//cambiar color de footer
+	//cambiar color de footerr

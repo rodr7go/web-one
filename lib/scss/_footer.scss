@@ -1,3 +1,10 @@
 .Footer {
-    background-color: crimson;
+    &-listItem {
+        margin: 0 15px;
+        i {
+            font-size: 1.5em;
+        }
+    }
+
+
 }
