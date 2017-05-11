@@ -23,14 +23,12 @@ var babelify   = require('babelify'),
 	.pipe(buffer())
 	.pipe(uglify())
 	.pipe(gulp.dest('public/js'))
-	// .pipe(refresh());
 });
 
 gulp.task('pug', function() {
 	return gulp.src('lib/pug/*.pug')
 		.pipe(pug())
 		.pipe(gulp.dest('./public'))
-		// .pipe(refresh());
 
 	setTimeout(function () {
 		del(['./public/layout.html']);
@@ -40,18 +38,17 @@ gulp.task('pug', function() {
 gulp.task('sass', function () {
 	return gulp.src('lib/scss/styles.scss')
 		.pipe(sass({
-			outputStyle: 'compressed'
+			// outputStyle: 'compressed'
 		}))
 		.pipe(gulp.dest('./public/css'))
-		// .pipe(refresh());
 });
 
 gulp.task('webserver', function() {
 	gulp.src('public/')
 		.pipe(server({
 			livereload: true,
-			// directoryListing: true,
 			open: false,
+			host: 'web-one',
 			port: 8080
 		}));
 });

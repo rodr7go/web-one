@@ -38,9 +38,23 @@
     padding: 0;
 }
 
+.pos-rel {
+    position: relative;
+}
+
 .txt-ctr {
     text-align: center;
 }
 .txt-rgt {
     text-align: right;
+}
+
+.wrapper {
+    max-width: 90%;
+    @media screen and (min-width: 768px) {
+        max-width: 80%;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 70%;
+    }
 }

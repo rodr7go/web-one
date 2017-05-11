@@ -3,19 +3,40 @@
     border: none;
     outline: none;
     cursor: pointer;
-    //padding: 0;
 }
 
-@mixin center-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin btn-style($bg-color: transparent,$border: 1px solid $color-white, $padd: .5em, $radius: 2px, $width: 150px){
+/*-------------- Estilos de botones -----------------------*/
+@mixin btn-style($bg-color: transparent,$border: 1px solid $color-white, $padd: .5em, $radius: 2px, $width: 150px, $font-s: 16px){
     background-color: $bg-color;
     border: $border;
     padding: $padd;
     border-radius: $radius;
     width: $width;
+    font-size: $font-s;
+    margin: auto;
+    overflow: hidden;
+}
+@mixin btn-afterStyles {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0;
+        color: red;
+        top: 50%;
+        left: 50%;
+        background-color: $color-white;
+        opacity: 0;
+        z-index: -1 !important;
+        transition: 1s all;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        box-sizing: border-box;
+    }
+    &:hover {
+        color: $color-black;
+    }
+    &:hover:after {
+        height: 500%;
+        opacity: 1;
+    }
 }

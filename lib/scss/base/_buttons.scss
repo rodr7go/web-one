@@ -1,0 +1,5 @@
+.Principal-button {
+    @include btn-style($radius: 0);
+    z-index: 1;
+    @include btn-afterStyles;
+}
