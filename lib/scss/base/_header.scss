@@ -5,10 +5,9 @@
     width: 100%;
     top: 0;
     &-logo{
-        width: 15%;
+        width: 50px;
         display: inline-block;
-        margin: 0;
-        padding: 12px 0 0 12px;
+        margin: 10px 0;
         img{
             width: 100%;
         }
@@ -19,17 +18,21 @@
         position: absolute;
         top: 15px;
         left: 15px;
-        color: $color-white;
-
         i{
-            font-size: 2em;
+            font-size: 1.3em;
+            color: $color-white;
+            transition: .5s all;
+        }
+        &:hover {
+            i {
+                color: cadetblue;
+            }
         }
     }
     &-nav{
         position: absolute;
         width: 100%;
         display: none;
-        //transition: .5s all;
         &-list{
             display: flex;
             flex-flow: row wrap;
@@ -39,7 +42,7 @@
         }
         &-listItem{
             width: 50%;
-            height: 140px;
+            height: 100px;
             box-sizing: border-box;
             border: 1px solid $border-item;
             background-color: $bg-listItem;

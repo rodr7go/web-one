@@ -1,12 +1,9 @@
--var redes = ['facebook', 'twitter', 'instagram', 'youtube'];
-//-var pages = ['facebook.com/controlmas.mx/?fref=ts', 'twitter.com/franco_esca', 'instagram.com/holaenfermera/?hl=en', 'youtube.com/user/matuk'];
-
-footer.Footer
-
-	.Footer-Networks
+include ../modifiers/variables
+footer.Footer.center-content
+	span.Footer-networks.txt-ctr
 		ul.Footer-list.padd-0.txt-ctr
-			each red in redes
-				li(class="Footer-listItem disp-inln-blk"): a(href="#" class="disp-blk"): i(class="color-black fa fa-"+red)
-				//i(class="fa fa-"+ cero++)
-	// dos divs uno con redes 4 sociales, otro con &copy-2017 y buscar forma de poner quien desarrollo
-	//cambiar color de footerr
+			each red, index in redes
+				li(class="Footer-listItem disp-inln-blk"): a(href="http://" + pages[index], target="_blank",class="disp-blk"): i(class="color-white fa fa-" + red)
+	span.Footer-copy
+		small.color-white Tu Compañia &copy 2017
+		small: a(href="#" class="color-white") Desarrollado por Mi

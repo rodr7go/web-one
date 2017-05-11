@@ -5,6 +5,11 @@
     background-color: tomato;
 }
 
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .color-white {
     color: $color-white;
 }
@@ -24,6 +29,9 @@
 }
 .m-t-sm {
     margin-top: 10px;
+}
+.m-t-lg{
+    margin-top: 25px;
 }
 
 .padd-0 {

@@ -12,8 +12,9 @@
     justify-content: center;
 }
 
-@mixin btn-style($bg: tomato, $padd: .5em, $radius: 2px, $width: 40%){
-    background-color: $bg;
+@mixin btn-style($bg-color: transparent,$border: 1px solid $color-white, $padd: .5em, $radius: 2px, $width: 150px){
+    background-color: $bg-color;
+    border: $border;
     padding: $padd;
     border-radius: $radius;
     width: $width;

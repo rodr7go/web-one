@@ -1,15 +1,17 @@
 var babelify   = require('babelify'),
 	browserify = require('browserify'),
 	buffer     = require('vinyl-buffer'),
-	connect    = require('gulp-connect'),
+	// connect    = require('gulp-connect'),
 	gulp       = require('gulp'),
-	pug       = require('gulp-pug'),
+	server 		= require('gulp-server-livereload'),
+	pug        = require('gulp-pug'),
 	nib        = require('nib'),
 	source     = require('vinyl-source-stream'),
-	sass     = require('gulp-sass'),
+	sass       = require('gulp-sass'),
 	uglify     = require('gulp-uglify');
 
-gulp.task('browserify', function () {
+
+	gulp.task('browserify', function () {
 	return browserify({
 		entries: 'lib/js/scripts.js'
 	})
@@ -21,14 +23,14 @@ gulp.task('browserify', function () {
 	.pipe(buffer())
 	.pipe(uglify())
 	.pipe(gulp.dest('public/js'))
-	.pipe(connect.reload());
+	// .pipe(refresh());
 });
 
 gulp.task('pug', function() {
 	return gulp.src('lib/pug/*.pug')
 		.pipe(pug())
 		.pipe(gulp.dest('./public'))
-		.pipe(connect.reload());
+		// .pipe(refresh());
 
 	setTimeout(function () {
 		del(['./public/layout.html']);
@@ -38,20 +40,20 @@ gulp.task('pug', function() {
 gulp.task('sass', function () {
 	return gulp.src('lib/scss/styles.scss')
 		.pipe(sass({
-			use: nib(),
-			'include css': true,
-			compress: true
+			outputStyle: 'compressed'
 		}))
 		.pipe(gulp.dest('./public/css'))
-		.pipe(connect.reload());
+		// .pipe(refresh());
 });
 
-gulp.task('connect', function() {
-	connect.server({
-		root: 'public',
-		host: 'http://proto-l',
-		livereload: true
-	});
+gulp.task('webserver', function() {
+	gulp.src('public/')
+		.pipe(server({
+			livereload: true,
+			// directoryListing: true,
+			open: false,
+			port: 8080
+		}));
 });
 
 gulp.task('fonts', function() {
@@ -65,4 +67,4 @@ gulp.task('watch', function () {
 	gulp.watch('lib/scss/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['browserify', 'pug', 'sass', 'fonts','watch', 'connect']);
+gulp.task('default', ['browserify', 'pug', 'sass', 'fonts', 'webserver','watch']);

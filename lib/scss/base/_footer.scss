@@ -1,0 +1,17 @@
+.Footer {
+    background-color: $bg-header;
+    &-listItem {
+        margin: 0 5px;
+        i {
+            color: crimson;
+        }
+    }
+    &-copy {
+
+        small{
+            font-size: 10px;
+            //flex-flow: row wrap;
+            margin: 0 10px;
+        }
+    }
+}
