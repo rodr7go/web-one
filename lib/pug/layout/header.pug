@@ -1,15 +1,8 @@
-header.Header
-	figure.Header-logo
-		img(src="/img/icon.png")
+include ../modifiers/variables
+header.Header.pos-fix.height-100.width-100.top-0
 	button.Header-menuBtn
-		i.fa.fa-bars
-	nav.Header-nav#header-menu
-		ul.Header-nav-list
-			li.Header-nav-listItem: a.center-content(href="#") List item 1
-				i.fa.fa-rocket
-			li.Header-nav-listItem: a.center-content(href="#") List item 2
-				i.fa.fa-gear
-			li.Header-nav-listItem: a.center-content(href="#") List item 3
-				i.fa.fa-wrench
-			li.Header-nav-listItem: a.center-content(href="#") List item 4
-				i.fa.fa-envelope-o
+		i.fa.fa-bars.color-white
+	nav.Header-nav.disp-none.width-100.height-100.top-0.bg-white#header-menu
+		ul.Header-nav-list.width-100.pos-rel.txt-ctr.center-content.m-0.height-100
+			each menuItem in menuItems
+				li.Header-nav-listItem.width-100: a(class="color-pink" href="#" + menuItem) #{menuItem}

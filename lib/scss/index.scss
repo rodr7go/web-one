@@ -1,3 +1,15 @@
+.Logo {
+    height: 100vh;
+    background: #313131;
+    &-image {
+        width: 50%;
+    }
+
+}
+#about h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+}
 .Principal {
     box-shadow: 1500px 1500px rgba($bg-header, .7) inset;
     &-description {
@@ -17,7 +29,22 @@
     }
 }
 .Second {
-    &-boton:hover{
-        background: red;
+    height: 110vh;
+    padding: 4em 0;
+    background: #f2f2f2;
+    &-image {
+        width: 250px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
     }
 }

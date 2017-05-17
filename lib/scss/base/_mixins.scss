@@ -5,7 +5,7 @@
     cursor: pointer;
 }
 
-/*-------------- Estilos de botones -----------------------*/
+//-------------- Estilos de botones ----------------------->
 @mixin btn-style($bg-color: transparent,$border: 1px solid $color-white, $padd: .5em, $radius: 2px, $width: 150px, $font-s: 16px){
     background-color: $bg-color;
     border: $border;

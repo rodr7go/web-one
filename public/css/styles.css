@@ -1,4 +1,25 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif; }
+
+h1 {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+figure {
+  margin: 0 !important;
+  padding: 0; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2328,12 +2349,17 @@
   overflow: visible;
   clip: auto; }
 
-/*-------------- Estilos de botones -----------------------*/
 .bg-attach-fix {
   background-attachment: fixed; }
 
 .bg-tomato {
   background-color: tomato; }
+
+.bg-white {
+  background-color: white; }
+
+.bg-pink {
+  background-color: #F7484E; }
 
 .center-content {
   display: flex;
@@ -2346,11 +2372,23 @@
 .color-black {
   color: black; }
 
+.color-pink {
+  color: #F7484E; }
+
 .disp-blk {
   display: block; }
 
 .disp-inln-blk {
   display: inline-block; }
+
+.disp-none {
+  display: none; }
+
+.height-100 {
+  height: 100vh; }
+
+.m-b-lg {
+  margin-bottom: 25px; }
 
 .m-t-xs {
   margin-top: 5px; }
@@ -2361,17 +2399,29 @@
 .m-t-lg {
   margin-top: 25px; }
 
+.m-0 {
+  margin: 0; }
+
 .padd-0 {
   padding: 0; }
 
 .pos-rel {
   position: relative; }
 
+.pos-fix {
+  position: fixed; }
+
+.top-0 {
+  top: 0; }
+
 .txt-ctr {
   text-align: center; }
 
 .txt-rgt {
   text-align: right; }
+
+.width-100 {
+  width: 100%; }
 
 .wrapper {
   max-width: 90%; }
@@ -2413,55 +2463,29 @@
     opacity: 1; }
 
 .Header {
-  background-color: #313131;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0; }
-  .Header-logo {
-    width: 80px;
-    display: inline-block;
-    margin: 10px 0;
-    transition: 1s all; }
-    .Header-logo img {
-      width: 100%; }
+  background-color: transparent; }
   .Header-menuBtn {
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    left: 15px; }
+    background-color: #F7484E;
+    padding: 8px 10px;
+    top: 20px;
+    left: 20px;
+    transition: .5s all;
+    z-index: 3; }
     .Header-menuBtn i {
       font-size: 1.3em;
-      color: white;
       transition: .5s all; }
-    .Header-menuBtn:hover i {
-      color: cadetblue; }
-  .Header-nav {
-    position: absolute;
-    width: 100%;
-    display: none; }
-    .Header-nav-list {
-      display: flex;
-      flex-flow: row wrap;
-      margin: 0;
-      padding: 0;
-      text-align: center; }
-    .Header-nav-listItem {
-      width: 50%;
-      height: 100px;
-      box-sizing: border-box;
-      border: 1px solid #34495e;
-      background-color: #2c3e50; }
-      .Header-nav-listItem a {
-        width: 100%;
-        height: 100%;
-        color: white; }
-        .Header-nav-listItem a i {
-          margin-left: 10px;
-          font-size: 2em; }
+  .Header-nav-list {
+    flex-flow: row wrap;
+    flex-direction: column; }
+  .Header-nav-listItem {
+    padding: 10px 0; }
+    .Header-nav-listItem a {
+      font-weight: bold; }
 
 .Footer {
   background-color: #313131; }
@@ -2472,6 +2496,16 @@
   .Footer-copy small {
     font-size: 10px;
     margin: 0 10px; }
+
+.Logo {
+  height: 100vh;
+  background: #313131; }
+  .Logo-image {
+    width: 50%; }
+
+#about h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em; }
 
 .Principal {
   box-shadow: 1500px 1500px rgba(49, 49, 49, 0.7) inset; }
@@ -2487,19 +2521,17 @@
       .Principal-image {
         height: 100vh; } }
 
-.Second-boton:hover {
-  background: red; }
+.Second {
+  height: 110vh;
+  padding: 4em 0;
+  background: #f2f2f2; }
+  .Second-image {
+    width: 250px; }
+    .Second-image img {
+      width: 100%; }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Helvetica", sans-serif; }
-
-h1 {
-  margin: 0 !important; }
-
-a {
-  text-decoration: none; }
-
-ul {
-  list-style: none; }
+@keyframes rotating {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(180deg); } }

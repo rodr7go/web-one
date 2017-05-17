@@ -1,11 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import 'base/variables';
-@import "node_modules/font-awesome/scss/font-awesome.scss";
-@import 'base/mixins';
-@import 'base/helpers';
-@import 'base/buttons';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'index';
 
 body{
     margin: 0;
@@ -14,13 +9,27 @@ body{
 }
 
 h1 {
-    margin: 0 !important;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
+    padding: 0;
 }
+
+figure {
+    margin: 0 !important;
+    padding: 0;
+}
+
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/buttons';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'index';

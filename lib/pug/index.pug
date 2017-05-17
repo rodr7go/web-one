@@ -1,12 +1,26 @@
 extends layout/layout
 
 block Main
+	section.Logo.center-content
+		article.txt-ctr
+			h1.color-pink Algun titulo bonito
+			figure.Logo-image.disp-inln-blk
+				img.width-100(src="/img/index/logo.png")
+
+	.bg-pink.height-100.width-100.center-content#about
+		h3.color-white About
 	section.Principal.Principal-image.center-content
 		.wrapper
 			article.Principal-description
-				h1.Principal-title.color-white.txt-ctr Este es el titulo principal
+				h2.Principal-title.color-white.txt-ctr Este es el titulo principal
 				p.color-white.txt-ctr Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				figure
-					img(src="")
 				.m-t-lg
 					a(href="#").Principal-button.color-white.disp-blk.txt-ctr.pos-rel Mas información
+
+	section.Second.center-content
+		.wrapper
+			article.Second-description.txt-ctr
+				h2.Second-title Titulo de la segunda seccion
+				figure.Second-image.disp-inln-blk.bg-attach-fix
+					img(src="/img/index/second-image.jpg")
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
