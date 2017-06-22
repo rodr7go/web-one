@@ -40,3 +40,20 @@
         opacity: 1;
     }
 }
+
+@mixin input-styles {
+    color: white;
+    outline: none;
+    border: 3px solid #eee;
+    border-radius: 4px;
+    background: transparent;
+    padding: .5em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all .3s linear;
+    &:focus {
+        border: none;
+        border-bottom: 3px solid $color-pink;
+        border-radius: inherit;
+    }
+}

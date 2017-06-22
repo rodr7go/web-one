@@ -10,6 +10,13 @@
 .bg-pink {
     background-color: $color-pink;
 }
+.bg-black {
+    background-color: $bg-header;
+}
+
+.border_input_styles {
+    @include input-styles;
+}
 
 .center-content {
     display: flex;

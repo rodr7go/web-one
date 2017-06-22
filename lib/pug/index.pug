@@ -9,18 +9,40 @@ block Main
 
 	.bg-pink.height-100.width-100.center-content#about
 		h3.color-white About
+
 	section.Principal.Principal-image.center-content
 		.wrapper
 			article.Principal-description
-				h2.Principal-title.color-white.txt-ctr Este es el titulo principal
-				p.color-white.txt-ctr Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				h2.Principal-title.color-white.txt-ctr Descripcion breve sobre nosotros
+				p.color-white.txt-ctr Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 				.m-t-lg
 					a(href="#").Principal-button.color-white.disp-blk.txt-ctr.pos-rel Mas información
 
-	section.Second.center-content
-		.wrapper
-			article.Second-description.txt-ctr
-				h2.Second-title Titulo de la segunda seccion
-				figure.Second-image.disp-inln-blk.bg-attach-fix
-					img(src="/img/index/second-image.jpg")
-				p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	.bg-white.height-100.width-100.center-content#work
+		h3 Work
+
+	section.Second
+		.child.center-content.bg-attach-fix
+			.wrapper
+				article.Second-description.txt-ctr
+					h2.color-white Titulo de relacionado a nuestro trabajo
+					p.color-white Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+	.bg-white.height-100.width-100.center-content#contact
+		h3 Contact
+	section.Contact.height-100.bg-black.center-content
+		form.Contact-form
+			p
+				label(for="name" class="color-white") Nombre:
+				input(type="text" id="name" class="border_input_styles")
+			p
+				label(for="phone" class="color-white") Telefono:
+				input(type="text" id="phone" class="border_input_styles")
+			p
+				label(for="email" class="color-white") Email:
+				input(type="text" id="email" class="border_input_styles")
+			p
+				label(for="message" class="color-white") Mensaje:
+				textarea(id="message" class="border_input_styles")
+			p
+				button(type="submit" class="submit-button") Enviar

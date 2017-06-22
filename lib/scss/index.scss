@@ -6,7 +6,7 @@
     }
 
 }
-#about h3 {
+#contact,#work,#about h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 5em;
 }
@@ -31,20 +31,38 @@
 .Second {
     height: 110vh;
     padding: 4em 0;
-    background: #f2f2f2;
-    &-image {
-        width: 250px;
-        img {
-            width: 100%;
+    overflow: hidden;
+    .child {
+        width: 100%;
+        height: 100%;
+        background:{
+            color: #f2f2f2;
+            image: url('/img/index/landscape.jpg');
+            position: center;
+            size: cover;
         }
+        transition: all .5s linear;
     }
 }
 
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
+.Contact {
+    .submit-button {
+        width: 100%;
+        border: none;
+        padding: .5em 0;
+        border-radius: 3px;
+        background: $color-pink;
+        color: white;
+        cursor: pointer;
     }
-    to {
-        transform: rotate(180deg);
+    &-form {
+        @media screen and (min-width: 1024px){
+            width: 100%;
+            text-align: center;
+            p {
+                width: 51%;
+                display: inline-block;
+            }
+        }
     }
 }

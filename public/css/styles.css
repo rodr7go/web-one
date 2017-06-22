@@ -2361,6 +2361,24 @@ figure {
 .bg-pink {
   background-color: #F7484E; }
 
+.bg-black {
+  background-color: #313131; }
+
+.border_input_styles {
+  color: white;
+  outline: none;
+  border: 3px solid #eee;
+  border-radius: 4px;
+  background: transparent;
+  padding: .5em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all .3s linear; }
+  .border_input_styles:focus {
+    border: none;
+    border-bottom: 3px solid #F7484E;
+    border-radius: inherit; }
+
 .center-content {
   display: flex;
   align-items: center;
@@ -2462,30 +2480,30 @@ figure {
     height: 500%;
     opacity: 1; }
 
-.Header {
-  background-color: transparent; }
-  .Header-menuBtn {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    position: absolute;
-    background-color: #F7484E;
-    padding: 8px 10px;
-    top: 20px;
-    left: 20px;
-    transition: .5s all;
-    z-index: 3; }
-    .Header-menuBtn i {
-      font-size: 1.3em;
-      transition: .5s all; }
-  .Header-nav-list {
-    flex-flow: row wrap;
-    flex-direction: column; }
-  .Header-nav-listItem {
-    padding: 10px 0; }
-    .Header-nav-listItem a {
-      font-weight: bold; }
+.Header-menuBtn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: #F7484E;
+  padding: 8px 10px;
+  top: 20px;
+  left: 20px;
+  transition: .5s all;
+  z-index: 3; }
+  .Header-menuBtn i {
+    font-size: 1.3em;
+    transition: .5s all; }
+
+.Header-nav-list {
+  flex-flow: row wrap;
+  flex-direction: column; }
+
+.Header-nav-listItem {
+  padding: 10px 0; }
+  .Header-nav-listItem a {
+    font-weight: bold; }
 
 .Footer {
   background-color: #313131; }
@@ -2503,7 +2521,7 @@ figure {
   .Logo-image {
     width: 50%; }
 
-#about h3 {
+#contact, #work, #about h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 5em; }
 
@@ -2524,14 +2542,29 @@ figure {
 .Second {
   height: 110vh;
   padding: 4em 0;
-  background: #f2f2f2; }
-  .Second-image {
-    width: 250px; }
-    .Second-image img {
-      width: 100%; }
+  overflow: hidden; }
+  .Second .child {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    background-image: url("/img/index/landscape.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: all .5s linear; }
 
-@keyframes rotating {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(180deg); } }
+.Contact .submit-button {
+  width: 100%;
+  border: none;
+  padding: .5em 0;
+  border-radius: 3px;
+  background: #F7484E;
+  color: white;
+  cursor: pointer; }
+
+@media screen and (min-width: 1024px) {
+  .Contact-form {
+    width: 100%;
+    text-align: center; }
+    .Contact-form p {
+      width: 51%;
+      display: inline-block; } }
