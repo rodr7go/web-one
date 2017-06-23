@@ -6,6 +6,10 @@ block Main
 			h1.color-pink Algun titulo bonito
 			figure.Logo-image.disp-inln-blk
 				img.width-100(src="/img/index/logo.png")
+			ul.Logo-list
+				li.Logo-listItem.list-target: a(href="#about") About
+				li.Logo-listItem.list-target: a(href="#work") Work
+				li.Logo-listItem.list-target: a(href="#contact") Contact
 
 	.bg-pink.height-100.width-100.center-content#about
 		h3.color-white About
@@ -33,16 +37,16 @@ block Main
 	section.Contact.height-100.bg-black.center-content
 		form.Contact-form
 			p
-				label(for="name" class="color-white") Nombre:
+				label(for="name" class="color-white label-tag") Nombre:
 				input(type="text" id="name" class="border_input_styles")
 			p
-				label(for="phone" class="color-white") Telefono:
+				label(for="phone" class="color-white label-tag") Telefono:
 				input(type="text" id="phone" class="border_input_styles")
 			p
-				label(for="email" class="color-white") Email:
+				label(for="email" class="color-white label-tag") Email:
 				input(type="text" id="email" class="border_input_styles")
 			p
-				label(for="message" class="color-white") Mensaje:
+				label(for="message" class="color-white label-tag") Mensaje:
 				textarea(id="message" class="border_input_styles")
 			p
 				button(type="submit" class="submit-button") Enviar

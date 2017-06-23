@@ -4,6 +4,25 @@
     &-image {
         width: 50%;
     }
+    @media screen and (min-width: 1024px) {
+        height: 70vh;
+        &-image {
+            width: 35%;
+        }
+    }
+    &-listItem {
+        display: none;
+        margin: 0 1em;
+        a {
+            color: $color-pink;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            display: inline-block;
+        }
+    }
 
 }
 #contact,#work,#about h3 {
@@ -41,7 +60,10 @@
             position: center;
             size: cover;
         }
-        transition: all .5s linear;
+        transition: all .2s linear;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 0;
     }
 }
 
@@ -63,6 +85,29 @@
                 width: 51%;
                 display: inline-block;
             }
+        }
+    }
+}
+#about,.Principal,#work,.Second,#contact,.Contact{
+    @media screen and (min-width: 1024px){
+        width: 50% !important;
+        display: inline-flex;
+        vertical-align: top;
+    }
+}
+#contact{
+    @media screen and (min-width: 1024px) {
+        background-color: $bg-header;
+        color: $color-white;
+    }
+}
+.Contact {
+    @media screen and (min-width: 1024px) {
+        background-color: white;
+        .label-tag {
+            color: $color-pink;
+            font-size: 18px;
+            margin-bottom: 3em;
         }
     }
 }

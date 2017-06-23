@@ -2378,6 +2378,10 @@ figure {
     border: none;
     border-bottom: 3px solid #F7484E;
     border-radius: inherit; }
+  @media screen and (min-width: 1024px) {
+    .border_input_styles {
+      border: 3px solid black;
+      color: black; } }
 
 .center-content {
   display: flex;
@@ -2505,6 +2509,10 @@ figure {
   .Header-nav-listItem a {
     font-weight: bold; }
 
+@media screen and (min-width: 1024px) {
+  .Header {
+    display: none; } }
+
 .Footer {
   background-color: #313131; }
   .Footer-listItem {
@@ -2520,6 +2528,21 @@ figure {
   background: #313131; }
   .Logo-image {
     width: 50%; }
+  @media screen and (min-width: 1024px) {
+    .Logo {
+      height: 70vh; }
+      .Logo-image {
+        width: 35%; } }
+  .Logo-listItem {
+    display: none;
+    margin: 0 1em; }
+    .Logo-listItem a {
+      color: #F7484E; }
+      .Logo-listItem a:hover {
+        text-decoration: underline; }
+    @media screen and (min-width: 1024px) {
+      .Logo-listItem {
+        display: inline-block; } }
 
 #contact, #work, #about h3 {
   font-family: 'Dancing Script', cursive;
@@ -2550,7 +2573,10 @@ figure {
     background-image: url("/img/index/landscape.jpg");
     background-position: center;
     background-size: cover;
-    transition: all .5s linear; }
+    transition: all .2s linear; }
+  @media screen and (min-width: 1024px) {
+    .Second {
+      padding: 0; } }
 
 .Contact .submit-button {
   width: 100%;
@@ -2568,3 +2594,22 @@ figure {
     .Contact-form p {
       width: 51%;
       display: inline-block; } }
+
+@media screen and (min-width: 1024px) {
+  #about, .Principal, #work, .Second, #contact, .Contact {
+    width: 50% !important;
+    display: inline-flex;
+    vertical-align: top; } }
+
+@media screen and (min-width: 1024px) {
+  #contact {
+    background-color: #313131;
+    color: white; } }
+
+@media screen and (min-width: 1024px) {
+  .Contact {
+    background-color: white; }
+    .Contact .label-tag {
+      color: #F7484E;
+      font-size: 18px;
+      margin-bottom: 3em; } }
